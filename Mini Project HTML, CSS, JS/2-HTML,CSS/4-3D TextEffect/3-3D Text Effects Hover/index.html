@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #000;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            /* position: absolute; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 150px;
+            color:  transparent;
+            outline: none;
+            -webkit-text-stroke: 1px #fff;
+            position: relative;
+        }
+        h1::before,
+        h1::after{
+            content: "YCoder ខ្មែរ Projects";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        h1:hover::before,
+        h1:focus::before{
+            color: #f00;
+            z-index: 1;
+            -webkit-text-stroke: 1px #000;
+            transform: translate(8px,-8px);
+        }
+        h1:hover::after,
+        h1:focus::after{
+            color: #0ff;
+            z-index: 2;
+            -webkit-text-stroke: 1px #000;
+            transform: translate(16px,-16px);
+        }
+    </style>
+</head>
+<body>
+    <div><h1>YCoder ខ្មែរ Projects</h1></div>
+</body>
+</html>
